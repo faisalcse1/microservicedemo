@@ -1,5 +1,7 @@
 using Catalog.API.Context;
 using Catalog.API.HostingService;
+using Catalog.API.Interfaces.Manager;
+using Catalog.API.Manager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHostedService<AppHostedService>();
+builder.Services.AddSingleton<ProductManager>();
 
 var app = builder.Build();
 
