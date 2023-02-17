@@ -12,16 +12,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHostedService<AppHostedService>();
-builder.Services.AddSingleton<ProductManager>();
+builder.Services.AddSingleton<IProductManager,ProductManager>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+   
 }
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseAuthorization();
 
