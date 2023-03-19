@@ -7,9 +7,9 @@ There are several microservices that have been developed for e-commerce, includi
 
 - [MD FAISAL](https://faisalcse1.gitlab.io/home)
 
-##Youtube Playlist
+## Youtube Playlist
 
-If you would like to watch full playlist, Please open the [.NET Microservices Architecture Bangla Tutorials(https://www.youtube.com/watch?v=G-zu-loz4qI&list=PLqCbg_KAOnCfGhU8iK-a-jyuQfvM-i1w7)] Playlist.
+If you would like to watch full playlist, Please open the -[.NET Microservices Architecture Bangla Tutorials](https://www.youtube.com/watch?v=G-zu-loz4qI&list=PLqCbg_KAOnCfGhU8iK-a-jyuQfvM-i1w7) Playlist.
 
 ## Feedback
 
