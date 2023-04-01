@@ -1,7 +1,5 @@
 # Ecommerce Sample Application with .NET 7 by using Microservice Architecture
-
-There are several microservices that have been developed for e-commerce, including modules for Catalog, Basket, Discount, and Ordering. These microservices use both NoSQL databases such as MongoDB and Redis, as well as relational databases like PostgreSQL and SQL Server. Communication between the microservices is facilitated through RabbitMQ's event-driven communication, and an Ocelot API Gateway is utilized.
-
+This is a microservice application built using various .NET technologies and frameworks commonly used in microservices architecture. The application includes microservices for Product, Basket, Discount and Ordering modules, which are essential for building e-commerce applications.
 
 ## Implementation
 
