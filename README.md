@@ -3,7 +3,7 @@
 There are several microservices that have been developed for e-commerce, including modules for Catalog, Basket, Discount, and Ordering. These microservices use both NoSQL databases such as MongoDB and Redis, as well as relational databases like PostgreSQL and SQL Server. Communication between the microservices is facilitated through RabbitMQ's event-driven communication, and an Ocelot API Gateway is utilized.
 
 
-##Implementation
+## Implementation
 
 The microservice application is built using a combination of NoSQL and relational databases. MongoDB and Redis are used for storing unstructured data and caching, while PostgreSQL and SqlServer are used for storing structured data.
 
