@@ -9,6 +9,9 @@ Communication between microservices is implemented using RabbitMQ for event-driv
 
 The application is built using the principles of Clean Architecture, which emphasizes the separation of concerns in software design. This makes it easy to maintain and modify the application over time.
 
+## Conclusion
+This microservice application demonstrates the use of various .NET technologies and frameworks commonly used in microservices architecture. It provides a practical and hands-on approach to learning microservices architecture, which is essential for developers who want to implement microservices in their own projects.
+
 ## Authors
 
 - [MD FAISAL](https://faisalcse1.gitlab.io/home)
