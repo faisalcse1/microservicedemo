@@ -1,9 +1,4 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ordering.Application.Features.Orders.Commands.CreateOrder
 {
@@ -15,9 +10,8 @@ namespace Ordering.Application.Features.Orders.Commands.CreateOrder
                 .NotNull()
                 .EmailAddress().WithMessage("Username should be valid email.");
             RuleFor(c => c.FirstName).NotEmpty().WithMessage("Please enter first name")
-                .MaximumLength(100).WithMessage("First name must not exceed 100 characters.");              ;
-            RuleFor(c => c.TotalPrice).GreaterThan(0).WithMessage("Total price should be greater than zero.");
-     
+                .MaximumLength(100).WithMessage("First name must not exceed 100 characters.");
+            RuleFor(c => c.TotalPrice).GreaterThan(0).WithMessage("Total price should be greater than zero.");     
             RuleFor(c => c.EmailAddress).EmailAddress().WithMessage("Emailaddress should be valid email.");
         }
     }
