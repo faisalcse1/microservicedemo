@@ -8,7 +8,12 @@ namespace Ordering.Infrastructure.Persistence
         public OrderDbContext(DbContextOptions<OrderDbContext> options) : base(options)
         {
         }
-        
+
+        protected override async void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            await OrderContextSeed.Seed(modelBuilder);
+            base.OnModelCreating(modelBuilder);
+        }
         public DbSet<Order> Orders { get; set; }
 
     }
