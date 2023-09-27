@@ -4,11 +4,6 @@ using Ordering.Application.Contacts.Infrastructure;
 using Ordering.Application.Contacts.Persistence;
 using Ordering.Application.Models;
 using Ordering.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ordering.Application.Features.Orders.Commands.CreateOrder
 {
