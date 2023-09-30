@@ -22,9 +22,20 @@ namespace Ordering.Infrastructure.Persistence
                     EmailAddress = "faisalcse3@gmail.com",
                     Address = "Dhaka",
                     TotalPrice = 100,
-                    City = "Dhaka"
+                    City = "Dhaka",
+                    CVV = "Test",
+                    CardName = "Test",
+                    CardNumber = "Test",
+                    Expiraton = "Test",
+                    PaymentMethod = 1,
+                    CreatedBy = "Test",
+                    CreatedDate = DateTime.Now,
+                    PhoneNumber = "01700000000",
+                    State = "Test",
+                    ZipCode = "Test"
                 }
                 );
+
         }
     }
 }
