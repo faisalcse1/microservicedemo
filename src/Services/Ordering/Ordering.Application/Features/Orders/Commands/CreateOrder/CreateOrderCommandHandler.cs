@@ -21,6 +21,8 @@ namespace Ordering.Application.Features.Orders.Commands.CreateOrder
         public async Task<bool> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
             var order = _mapper.Map<Order>(request);
+            order.CreatedBy = "1";
+            order.CreatedDate = DateTime.Now; 
             bool isOrderPlaced = await _orderRepository.AddAsync(order);
             if (isOrderPlaced)
             {
