@@ -17,8 +17,8 @@ builder.Services.AddScoped<DiscountGrpcService>();
 builder.Services.AddScoped<IBasketRepository,BasketRepository>();
 
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-//RabbitMQ Configuration
 
+//RabbitMQ Configuration
 builder.Services.AddMassTransit(config =>
 {
     config.UsingRabbitMq((ctx, cfg) =>
