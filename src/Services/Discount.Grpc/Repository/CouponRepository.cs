@@ -35,8 +35,7 @@ namespace Discount.Grpc.Repository
         }
 
         public async Task<Coupon> GetDiscount(string productId)
-        {
-            var dd = _configuration.GetConnectionString("DiscountDB");
+        {            
             var connection = new NpgsqlConnection(_configuration.GetConnectionString("DiscountDB"));
             var coupon = await connection.QueryFirstOrDefaultAsync<Coupon>
                 ("SELECT * FROM Coupon WHERE ProductId=@ProductId", new { ProductId = productId });
