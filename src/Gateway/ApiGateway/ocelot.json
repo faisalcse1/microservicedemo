@@ -1,6 +1,38 @@
 {
   "Routes": [
     {
+      "DownstreamPathTemplate": "/api/catalog/getbyid?id={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/catalog/getinfo?id={id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      },
+      "Key": "catalogdetails"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Discount/GetDiscount?productId={id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Discount/getinfo?productId={id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "FileCacheOptions": {
+        "TtlSeconds": 10
+      },    
+      "Key": "discountdetails"
+    },
+    {
       "DownstreamPathTemplate": "/api/catalog/{everithing}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -22,7 +54,14 @@
         }
       ],
       "UpstreamPathTemplate": "/api/Basket/{everithing}",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "RateLimitOptions": {
+        "ClientWhitelist": [ "postman" ],
+        "EnableRateLimiting": true,
+        "Period": "3s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
     },
     {
       "DownstreamPathTemplate": "/api/Discount/{everithing}",
@@ -37,6 +76,20 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     }
   ],
+
+  "Aggregates": [
+
+    {
+      "UpstreamPathTemplate": "/api/details?id={id}",
+      "RouteKeys": [
+        "catalogdetails",
+        "discountdetails"
+
+      ]
+    }
+    
+  ],
+
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:5051"
   }
